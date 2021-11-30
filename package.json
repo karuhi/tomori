@@ -1,0 +1,25 @@
+{
+  "name": "tracker.l1ght.app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.15.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "nuxt": "^2.15.7",
+    "passport": "^0.5.0",
+    "passport-steam": "^1.0.17"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.2"
+  }
+}
