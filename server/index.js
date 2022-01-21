@@ -55,6 +55,8 @@ app.use(
   })
 )
 
+// app.use('/steam', steamApi)
+
 // Initialize Passport!  Also use passport.session() middleware, to support
 // persistent login sessions (recommended).
 app.use(passport.initialize())
@@ -84,6 +86,10 @@ app.get(
 app.get('/auth/logout', (req, res) => {
   req.logout()
   res.redirect('/')
+})
+
+app.get('/steam/GetPlayerSummaries', (req, res) => {
+  res.send({ message: 'hello', id: req.params.id })
 })
 
 module.exports = {

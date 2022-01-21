@@ -26,6 +26,7 @@
     <p>displayName:{{ $store.state.user.displayName }}</p>
     <br />
     <a href="/api/auth/logout" class="button--green">Logout</a>
+    <button @click="getPersonaState">get personastate</button>
   </div>
 </template>
 
@@ -40,9 +41,9 @@ export default {
   methods: {
     getPersonaState() {
       // [WIP] TODO: serverMiddlewareにAPIつくる
-      const res = this.$axios.get('/api/steamwebapi/GetPlayerSummaries', {
+      const res = this.$axios.get('/api/steam/GetPlayerSummaries', {
         params: {
-          steamid: $store.state.user.id,
+          steamid: this.$store.state.user.id,
         },
       })
     },
