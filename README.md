@@ -1,69 +1,52 @@
-# tracker.l1ght.app
+# tomori | ゲーマーのための解析プラットフォーム
 
-## Build Setup
+![Key Visual Image](./static/tomori-keyvisual.png?raw=true)
 
-```bash
-# install dependencies
-$ yarn install
+---
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+tomori は、ゲーマーに関するあらゆるデータを活用し、効率的なプレイを実現するための解析プラットフォームです。ゲームのプレイには、環境・精神状態など様々な要素が影響します。tomori はこれらの要素をデータ化し、ゲーマーがゲームに集中できる環境を提供します。
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+---
 
-# generate static project
-$ yarn generate
-```
+## Load Map
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+具体的な目標として
 
-## Special Directories
+- [Steam API](https://steamcommunity.com/dev)からプレイ時間を取得
+- RL API から現在のランクを取得
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+上記のパラメータから、プレイ時間/ランクの分析をし、グラフ等で可視化する。
+また、パラメータはデータベースに保存し、継続的なデータの解析を行えるようにする。
 
-### `assets`
+| Done? | Name                                   |
+| :---: | -------------------------------------- |
+|  ✅   | Steam にログイン                       |
+|  ⬜️  | Steam 情報を取得                       |
+|  ⬜️  | アカウントのデータを保存する DB を用意 |
+|  ⬜️  | Steam から取得したデータを DB に保存   |
+|  ⬜️  | RL から情報を取得                      |
+|  ⬜️  | RL から取得したデータを DB に保存      |
+|  ⬜️  | データをもとにグラフ等で可視化         |
+|  ⬜️  | 蓄積されたデータから状況を解析         |
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## Getting Started
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+tomori の使い方を参照してください。(ただいま整備中です)
 
-### `components`
+## Contributing
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+tomori に関するバグレポートやリクエストはこちら
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+[Issue](https://github.com/karuhi/tomori/issues/new)
 
-### `layouts`
+## License
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Apache-2.0 (ただいま整備中です)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+## Contact
 
+tomori についてのお問合せはこちら
 
-### `pages`
+下記 Twitter のダイレクトメッセージよりお願いします。
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+https://twitter.com/hi_karuh
